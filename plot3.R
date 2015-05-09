@@ -2,7 +2,7 @@
 ##  Oscar Saúl Navarro-Morato
 ##  May / 2015
 
-## R code to create a plot 1.
+## R code to create a plot 3.
 
 # Assumes that the file to read is located in the workspace
 
