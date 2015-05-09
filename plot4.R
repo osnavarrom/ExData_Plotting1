@@ -4,6 +4,9 @@
 
 ## R code to create a plot 4.
 
+library(plyr)
+library(dplyr)
+
 # Assumes that the file to read is located in the workspace
 
 data <- read.csv2("household_power_consumption.txt", header = TRUE, 
@@ -23,7 +26,7 @@ data$Voltage <- as.numeric(data$Voltage)
 
 newdata <- filter(data, Date == "2007-02-01" | Date == "2007-02-02")
 
-# Plot 4
+# Plot 4 / png() size image 480 x 480 by default.
 
 png(file = "plot4.png", bg = "transparent")
 par(mfrow = c(2, 2), bg = "transparent")

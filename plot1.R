@@ -2,7 +2,10 @@
 ##  Oscar Saúl Navarro-Morato
 ##  May / 2015
 
-## R code to create a plot 1.
+## R code to create plot 1.
+
+library(plyr)
+library(dplyr)
 
 # Assumes that the file to read is located in the workspace
 
@@ -18,8 +21,9 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 
 newdata <- filter(data, Date == "2007-02-01" | Date == "2007-02-02")
 
-# Plot 1
-png(file = "plot1.png", bg = "transparent")
+# Plot 1 / png() size image 480 x 480 by default.
+
+png(file = "plot1.png", bg = "transparent") 
 hist(newdata$Global_active_power, col = "red", breaks = 12, 
      main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 dev.off()

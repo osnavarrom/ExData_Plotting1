@@ -2,7 +2,10 @@
 ##  Oscar Saúl Navarro-Morato
 ##  May / 2015
 
-## R code to create a plot 2.
+## R code to create plot 2.
+
+library(plyr)
+library(dplyr)
 
 # Assumes that the file to read is located in the workspace
 
@@ -18,7 +21,7 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 
 newdata <- filter(data, Date == "2007-02-01" | Date == "2007-02-02")
 
-# Plot 2
+# Plot 2 / png() size image 480 x 480 by default.
 
 par(mfrow = c(1, 1), bg = "transparent")
 

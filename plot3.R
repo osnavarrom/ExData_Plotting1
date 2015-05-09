@@ -4,6 +4,9 @@
 
 ## R code to create a plot 3.
 
+library(plyr)
+library(dplyr)
+
 # Assumes that the file to read is located in the workspace
 
 data <- read.csv2("household_power_consumption.txt", header = TRUE, 
@@ -21,7 +24,7 @@ data$Sub_metering_3 <- as.numeric(data$Sub_metering_3)
 
 newdata <- filter(data, Date == "2007-02-01" | Date == "2007-02-02")
 
-# Plot 3
+# Plot 3 / png() size image 480 x 480 by default.
 
 par(mfrow = c(1, 1), bg = "transparent")
 
